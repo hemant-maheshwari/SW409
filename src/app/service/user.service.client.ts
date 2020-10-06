@@ -16,4 +16,15 @@ export class UserService{
     }
     return null;
   }
+
+  findUserById(id: String){
+    for(let i=0; i<this.users.length; i++){
+      const user = this.users[i];
+      if(id === user._id.toString()){
+        return user;
+      }
+    }
+    return null;
+  }
+
 }
